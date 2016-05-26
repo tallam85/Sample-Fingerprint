@@ -2,10 +2,20 @@
 <html>
 <head>
 <title> Finger Print Test</title>
-<script type="text/javascript" src="https://rawgit.com/jackspirou/clientjs/master/dist/client.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/1.2.0/fingerprint2.min.js"></script>
 </head>
  <script>
-	var client = new ClientJS(); // Create A New Client Object
+ new Fingerprint2().get(function(result, components){
+ 	console.log("components>>>", components, "resultssssss", result);
+ });
+ var options = {swfPath: '/assets/FontList.swf', excludeUserAgent: true};
+ new Fingerprint2(options).get(function (argument) {
+ 	console.log(options);
+ 	// body...
+ 	console.log("argument", argument);
+ });
+
+	/*var client = new ClientJS(); // Create A New Client Object
 
 	if( client.isMobile() ) { // Check For Mobile Device
 
@@ -25,6 +35,6 @@
 		}else{
 			alert('No Java Installed...');
 		}
-	}
+	}*/
 </script>
 </html>
