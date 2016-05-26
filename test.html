@@ -7,6 +7,7 @@
  <script>
  new Fingerprint2().get(function(result, components){
  	console.log("components>>>", components, "resultssssss", result);
+ 	alert("result value ", result);
  });
  var options = {swfPath: '/assets/FontList.swf', excludeUserAgent: true};
  new Fingerprint2(options).get(function (argument) {
