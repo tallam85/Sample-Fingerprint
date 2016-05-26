@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Finger Print Test</title>
+<script type="text/javascript" src="https://rawgit.com/jackspirou/clientjs/master/dist/client.min.js"></script>
+</head>
+ <script>
+ <script>
+	var client = new ClientJS(); // Create A New Client Object
+
+	if( client.isMobile() ) { // Check For Mobile Device
+
+		if( client.isMobileAndroid() ) { // Check For Android
+			alert('We Got Us Some Android!');
+
+		}else if( client.isMobileIOS() ){ // Check For iOS
+			alert('We Got Us Some Apple iOS!');
+
+		}else{
+			alert('Unknown Mobile Device...');
+		}
+	}else{
+		if( client.isJava() ) { // Check If Java Is Installed
+  			alert('Java ' + client.getJavaVersion() ); // Get Java Version
+
+		}else{
+			alert('No Java Installed...');
+		}
+	}
+</script>
+ </script>
+</html>
