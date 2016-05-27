@@ -3,7 +3,7 @@
 <head>
 <title> Finger Print Test</title>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/1.2.0/fingerprint2.min.js"></script>
-<script type="text/javascript" src="https://raw.githubusercontent.com/jackspirou/clientjs/master/dist/client.min.js"></script>
+<script type="text/javascript" src="http://rawgit.com/jackspirou/clientjs/master/dist/client.min.js"></script>
 </head>
 
 <body>
@@ -15,28 +15,22 @@
 	 new Fingerprint2(options).get(function (argument) {
 	 	console.log(options);
 	 	// body...
-	 	alert.log("argument"+argument);
+	 	alert("argument"+argument);
 	 });
-
 		var client = new ClientJS(); // Create A New Client Object
 		var fingerprint = client.getFingerprint();
 		alert("fingerprint>>>>>>>>"+fingerprint);
-
 		if( client.isMobile() ) { // Check For Mobile Device
-
 			if( client.isMobileAndroid() ) { // Check For Android
 				alert('We Got Us Some Android!');
-
 			}else if( client.isMobileIOS() ){ // Check For iOS
 				alert('We Got Us Some Apple iOS!');
-
 			}else{
 				alert('Unknown Mobile Device...');
 			}
 		}else{
 			if( client.isJava() ) { // Check If Java Is Installed
 	  			alert('Java ' + client.getJavaVersion() ); // Get Java Version
-
 			}else{
 				alert('No Java Installed...');
 			}
