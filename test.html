@@ -2,27 +2,16 @@
 <html>
 <head>
 <title> Finger Print Test</title>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/1.2.0/fingerprint2.min.js"></script>
 <script type="text/javascript" src="http://rawgit.com/jackspirou/clientjs/master/dist/client.min.js"></script>
 </head>
 
 <body>
 	 <script>
-	 new Fingerprint2().get(function(result, components){
-	 	console.log("components>>>", components, "resultssssss", result);
-	 });
-	 var options = {swfPath: '/assets/FontList.swf', excludeUserAgent: true};
-	 new Fingerprint2(options).get(function (argument) {
-	 	console.log(options);
-	 	// body...
-	 	alert("argument"+argument);
-	 });
 		var client = new ClientJS(); // Create A New Client Object
-		var fingerprint = client.getFingerprint();
-		alert("fingerprint>>>>>>>>"+fingerprint);
+	 	var fingerprint = client.getFingerprint();
 		if( client.isMobile() ) { // Check For Mobile Device
 			if( client.isMobileAndroid() ) { // Check For Android
-				alert('We Got Us Some Android!');
+				alert('We Got Us Some Android with finger print'+ fingerprint);
 			}else if( client.isMobileIOS() ){ // Check For iOS
 				alert('We Got Us Some Apple iOS!');
 			}else{
